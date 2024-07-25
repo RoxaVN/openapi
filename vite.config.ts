@@ -1,3 +1,3 @@
-import { viteConfig } from '@roxavn/dev-web';
+import { viteConfig } from '@roxavn/cli';
 
 export default viteConfig();
