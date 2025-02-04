@@ -36,8 +36,8 @@ export async function loader({ request }: LoaderFunctionArgs) {
           paths[api.path] = {};
         }
         paths[api.path][api.method.toLowerCase()] = {
-          security: api.permission && [{ tokenAuth: [] }],
-          tags: [api.scope.name],
+          security: api.authorization && [{ tokenAuth: [] }],
+          tags: [api.source.name],
           responses: {
             200: {
               description: 'Default Response',
