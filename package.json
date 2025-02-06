@@ -36,22 +36,21 @@
     "react-dom": "^18.2.0"
   },
   "exports": {
-    ".": "./dist/esm/index.js",
-    "./web": "./dist/esm/web/index.js",
-    "./base": "./dist/esm/base/index.js",
-    "./server": "./dist/esm/server/index.js"
-  },
-  "typesVersions": {
-    "*": {
-      "web": [
-        "dist/esm/web/index.d.ts"
-      ],
-      "base": [
-        "dist/esm/base/index.d.ts"
-      ],
-      "server": [
-        "dist/esm/server/index.d.ts"
-      ]
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
+    },
+    "./web": {
+      "types": "./dist/esm/web/index.d.ts",
+      "default": "./dist/esm/web/index.js"
+    },
+    "./base": {
+      "types": "./dist/esm/base/index.d.ts",
+      "default": "./dist/esm/base/index.js"
+    },
+    "./server": {
+      "types": "./dist/esm/server/index.d.ts",
+      "default": "./dist/esm/server/index.js"
     }
   },
   "files": [
