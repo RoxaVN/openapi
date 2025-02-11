@@ -1,5 +1,9 @@
-import { json, type LinksFunction, type MetaFunction } from '@remix-run/node';
-import { useLoaderData } from '@remix-run/react';
+import {
+  useLoaderData,
+  type LinksFunction,
+  type MetaFunction,
+} from 'react-router';
+
 import { ServerModule } from '@roxavn/core/server';
 import { useEffect } from 'react';
 
@@ -9,12 +13,10 @@ export async function loader() {
     for (const m of ServerModule.apiRoutes) {
       result.add(m.api.module.name);
     }
-    return json(
-      [...result].map((m) => ({
-        name: m,
-        url: './openapi/json?q=' + decodeURIComponent(m),
-      }))
-    );
+    return [...result].map((m) => ({
+      name: m,
+      url: './openapi/json?q=' + decodeURIComponent(m),
+    }));
   }
   throw new Response(null, { status: 404, statusText: 'Not Found' });
 }

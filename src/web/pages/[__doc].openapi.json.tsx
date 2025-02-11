@@ -1,6 +1,6 @@
-import { json, LoaderFunctionArgs } from '@remix-run/node';
 import { TSchema } from '@roxavn/core/base';
 import { moduleManager, ServerModule } from '@roxavn/core/server';
+import { LoaderFunctionArgs } from 'react-router';
 
 export const mapProperties = (name: string, schema: TSchema) => {
   return Object.entries(schema.properties ?? []).map(([key, value]) => {
@@ -41,17 +41,13 @@ export async function loader({ request }: LoaderFunctionArgs) {
           responses: {
             200: {
               description: 'Default Response',
-              content: {
-                'application/json': { schema: api.response },
-              },
+              content: { 'application/json': { schema: api.response } },
             },
           },
           requestBody:
             api.method !== 'GET'
               ? {
-                  content: {
-                    'application/json': { schema: api.request },
-                  },
+                  content: { 'application/json': { schema: api.request } },
                   required: true,
                 }
               : undefined,
@@ -62,7 +58,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
         };
       }
 
-      return json({
+      return {
         openapi: '3.0.3',
         info: {
           title: moduleInfo.name,
@@ -81,7 +77,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
           schemas: {},
         },
         paths,
-      });
+      };
     }
   }
   throw new Response(null, { status: 404, statusText: 'Not Found' });
