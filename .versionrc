@@ -1,5 +1,0 @@
-{
-  "scripts": {
-    "postchangelog": "prettier --write CHANGELOG.md"
-  }
-}
