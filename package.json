@@ -1,6 +1,6 @@
 {
   "name": "@roxavn/openapi",
-  "version": "0.1.0",
+  "version": "3.0.0",
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "roxavn build",
@@ -14,7 +14,6 @@
   "devDependencies": {
     "@roxavn/cli": "^3.0.0",
     "@roxavn/code-convention": "^1.0.0",
-
     "lefthook": "^1.10.10",
     "typescript": "^5.0.4"
   },
