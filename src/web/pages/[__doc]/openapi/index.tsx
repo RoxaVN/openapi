@@ -1,7 +1,7 @@
 import {
-  useLoaderData,
   type LinksFunction,
   type MetaFunction,
+  useLoaderData,
 } from 'react-router';
 
 import { ServerModule } from '@roxavn/core/server';

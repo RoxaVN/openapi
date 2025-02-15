@@ -1,8 +1,8 @@
 import { TSchema } from '@roxavn/core/base';
-import { moduleManager, ServerModule } from '@roxavn/core/server';
+import { ServerModule, moduleManager } from '@roxavn/core/server';
 import { LoaderFunctionArgs } from 'react-router';
 
-export const mapProperties = (name: string, schema: TSchema) => {
+const mapProperties = (name: string, schema: TSchema) => {
   return Object.entries(schema.properties ?? []).map(([key, value]) => {
     const {
       type: valueType = undefined,
