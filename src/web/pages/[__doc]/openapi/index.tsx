@@ -1,11 +1,10 @@
+import { ServerModule } from '@roxavn/core/server';
+import { useEffect } from 'react';
 import {
   type LinksFunction,
   type MetaFunction,
   useLoaderData,
 } from 'react-router';
-
-import { ServerModule } from '@roxavn/core/server';
-import { useEffect } from 'react';
 
 export async function loader() {
   if (process.env.NODE_ENV === 'development') {

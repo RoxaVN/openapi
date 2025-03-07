@@ -5,3 +5,9 @@ The plugin automatically generates OpenAPI documentation for all installed RoxaV
 ```
 http://localhost:3000/__doc/openapi
 ```
+
+Install
+
+```bash
+npm i -D @roxavn/openapi
+```
