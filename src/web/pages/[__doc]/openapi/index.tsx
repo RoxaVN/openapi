@@ -7,7 +7,7 @@ import {
 } from 'react-router';
 
 export async function loader() {
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.ALLOW_OPENAPI) {
     const result = new Set<string>();
     for (const m of ServerModule.apiRoutes) {
       result.add(m.api.module.name);

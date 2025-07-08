@@ -22,7 +22,7 @@ const mapProperties = (name: string, schema: TSchema) => {
 };
 
 export async function loader({ request }: LoaderFunctionArgs) {
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.ALLOW_OPENAPI) {
     const url = new URL(request.url);
     const query = url.searchParams.get('q');
     const moduleInfo = moduleManager.modules.find((m) => m.name === query);
