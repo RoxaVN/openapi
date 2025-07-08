@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/RoxaVN/roxavn/compare/v3.3.0...v3.5.0) (2025-07-08)
+
+
+### Features
+
+* use ALLOW_OPENAPI ([4b8a51b](https://github.com/RoxaVN/roxavn/commit/4b8a51b656d97da42c4307f8d08c2c5dfbf6206e))
+
 ## [3.3.0](https://github.com/RoxaVN/roxavn/compare/v3.2.0...v3.3.0) (2025-04-24)
 
 ## [3.2.0](https://github.com/RoxaVN/roxavn/compare/v3.1.0...v3.2.0) (2025-03-27)
