@@ -1,4 +1,4 @@
-import { ServerModule } from '@roxavn/core/server';
+import { ApiManager } from '@roxavn/core/server';
 import { useEffect } from 'react';
 import {
   type LinksFunction,
@@ -9,7 +9,7 @@ import {
 export async function loader() {
   if (process.env.ALLOW_OPENAPI) {
     const result = new Set<string>();
-    for (const m of ServerModule.apiRoutes) {
+    for (const m of ApiManager.apiRoutes) {
       result.add(m.api.module.name);
     }
     return [...result].map((m) => ({

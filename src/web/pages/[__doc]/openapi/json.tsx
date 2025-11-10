@@ -1,5 +1,5 @@
 import { TSchema } from '@roxavn/core/base';
-import { ServerModule, moduleManager } from '@roxavn/core/server';
+import { ApiManager, moduleManager } from '@roxavn/core/server';
 import { LoaderFunctionArgs } from 'react-router';
 
 const mapProperties = (name: string, schema: TSchema) => {
@@ -27,7 +27,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
     const query = url.searchParams.get('q');
     const moduleInfo = moduleManager.modules.find((m) => m.name === query);
     if (query && moduleInfo) {
-      const apis = ServerModule.apiRoutes
+      const apis = ApiManager.apiRoutes
         .filter((a) => a.api.module.name === query)
         .map((a) => a.api);
       const paths: any = {};
@@ -47,9 +47,9 @@ export async function loader({ request }: LoaderFunctionArgs) {
           requestBody:
             api.method !== 'GET'
               ? {
-                  content: { 'application/json': { schema: api.request } },
-                  required: true,
-                }
+                content: { 'application/json': { schema: api.request } },
+                required: true,
+              }
               : undefined,
           parameters:
             api.method === 'GET'
