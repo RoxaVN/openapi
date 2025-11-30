@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.7.0](https://github.com/RoxaVN/roxavn/compare/v3.6.0...v3.7.0) (2025-11-30)
+
+
+### Features
+
+* update module name ([6ed6e33](https://github.com/RoxaVN/roxavn/commit/6ed6e332ff129087f7af3b42a45af83f08199c64))
+* use ApiManager ([63e40ec](https://github.com/RoxaVN/roxavn/commit/63e40ec453eacfbc1cd3032760aec254b36e3b5f))
+
 ## [3.6.0](https://github.com/RoxaVN/roxavn/compare/v3.5.0...v3.6.0) (2025-10-07)
 
 ## [3.5.0](https://github.com/RoxaVN/roxavn/compare/v3.3.0...v3.5.0) (2025-07-08)

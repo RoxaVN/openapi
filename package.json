@@ -1,6 +1,6 @@
 {
   "name": "@roxavn/plugin-openapi",
-  "version": "3.6.0",
+  "version": "3.7.0",
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "roxavn build",
@@ -40,5 +40,10 @@
       "default": "./dist/esm/server/index.js"
     }
   },
-  "files": ["CHANGELOG.md", "LICENSE.txt", "/dist", "/static"]
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE.txt",
+    "/dist",
+    "/static"
+  ]
 }
